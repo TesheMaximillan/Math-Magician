@@ -6,13 +6,7 @@
 
 ## Live Demo
 
-[Live Demo Link](coming soon)
-
 ## Screenshot
-
-- **Project Screenshot**: 
-
-- Comming soon
 
 # Author
 
