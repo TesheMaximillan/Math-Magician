@@ -1,8 +1,6 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 
-class Calculator extends React.Component {
+class Calculator extends React.PureComponent {
   render() {
     return (
       <table className="calculator">
