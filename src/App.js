@@ -1,7 +1,16 @@
-function App() {
-  return (
-    <div><h2>Math Magician Project Setup!!!</h2></div>
-  );
+import React from 'react';
+
+import Calculator from './components/Calculator';
+import './styles/main.scss';
+
+class App extends React.PureComponent {
+  render() {
+    return (
+      <div>
+        <Calculator />
+      </div>
+    );
+  }
 }
 
 export default App;

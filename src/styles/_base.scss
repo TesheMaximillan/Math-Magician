@@ -1,0 +1,38 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --top: #858694;
+  --main: #e0e0e0;
+  --border: #d8d6d6;
+  --side: #f5913e;
+}
+
+// ///////////////////////////// Global Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+@mixin input {
+  border: none;
+  height: 5rem;
+  width: 100%;
+}
