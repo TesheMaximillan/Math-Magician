@@ -11,7 +11,6 @@ class Calculator extends React.PureComponent {
       enteredValue: 0,
     };
     this.handleSelectedValue = this.handleSelectedValue.bind(this);
-    // eslint-disable-next-line max-len
     this.keyValues = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
   }
 
