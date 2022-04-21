@@ -7,8 +7,9 @@
 ## Requirements
 
 * Existing calculate.js and operate.js are added into a logic/ directory.
-* Event handlers are implemented 
+* Event handlers are implemented.
 * I Used the math logic from calculate.js and operate.js.
+* Refactor a class based component to a functional component.
 
 ## Technologies
 
