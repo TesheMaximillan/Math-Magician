@@ -24,11 +24,21 @@ function Calculator() {
 
   const addClass = (arr, e) => {
     let classname = 'calculator__column calculator__column--main';
-    if (arr.indexOf(e) === arr.length - 1) {
+    if (arr.indexOf(e) === arr.length - 1 && arr.length !== 1) {
       classname = 'calculator__column calculator__column--side';
     }
     return classname;
   };
+
+  const displayKey = (start, end, span) => keyValues.slice(start, end).map((e) => (
+    <MainKeys
+      key={e}
+      value={e}
+      colSpan={span}
+      className={addClass(keyValues.slice(start, end), e)}
+      handleClick={handleSelectedValue}
+    />
+  ));
 
   return (
     <table className="calculator">
@@ -40,64 +50,13 @@ function Calculator() {
           <input type="text" className="result" disabled value={value} />
         </td>
       </tr>
+      <tr className="calculator__row">{ displayKey(0, 4) }</tr>
+      <tr className="calculator__row">{ displayKey(4, 8) }</tr>
+      <tr className="calculator__row">{ displayKey(8, 12) }</tr>
+      <tr className="calculator__row">{ displayKey(12, 16) }</tr>
       <tr className="calculator__row">
-        {keyValues.slice(0, 4).map((e) => (
-          <MainKeys
-            key={e}
-            value={e}
-            className={addClass(keyValues.slice(0, 4), e)}
-            handleClick={handleSelectedValue}
-          />
-        ))}
-      </tr>
-      <tr>
-        {keyValues.slice(4, 8).map((e) => (
-          <MainKeys
-            key={e}
-            value={e}
-            className={addClass(keyValues.slice(4, 8), e)}
-            handleClick={handleSelectedValue}
-          />
-        ))}
-      </tr>
-      <tr>
-        {keyValues.slice(8, 12).map((e) => (
-          <MainKeys
-            key={e}
-            value={e}
-            className={addClass(keyValues.slice(8, 12), e)}
-            handleClick={handleSelectedValue}
-          />
-        ))}
-      </tr>
-      <tr>
-        {keyValues.slice(12, 16).map((e) => (
-          <MainKeys
-            key={e}
-            value={e}
-            className={addClass(keyValues.slice(12, 16), e)}
-            handleClick={handleSelectedValue}
-          />
-        ))}
-      </tr>
-      <tr>
-        {keyValues.slice(16, 17).map((e) => (
-          <MainKeys
-            colSpan={2}
-            key={e}
-            value={e}
-            className="calculator__column calculator__column--main"
-            handleClick={handleSelectedValue}
-          />
-        ))}
-        {keyValues.slice(17, 19).map((e) => (
-          <MainKeys
-            key={e}
-            value={e}
-            className={addClass(keyValues.slice(17, 19), e)}
-            handleClick={handleSelectedValue}
-          />
-        ))}
+        { displayKey(16, 17, 2) }
+        { displayKey(17, 19) }
       </tr>
     </table>
   );
