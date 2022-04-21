@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class MainKeys extends React.PureComponent {
-  render() {
-    const {
-      value, handleClick, className, colSpan,
-    } = this.props;
-    return (
-      <td className={className} colSpan={colSpan}>
-        <input type="button" value={value} onClick={handleClick} />
-      </td>
-    );
-  }
+function MainKeys(props) {
+  const {
+    value, handleClick, className, colSpan,
+  } = props;
+
+  return (
+    <td className={className} colSpan={colSpan}>
+      <input type="button" value={value} onClick={handleClick} />
+    </td>
+  );
 }
 
 MainKeys.propTypes = {
