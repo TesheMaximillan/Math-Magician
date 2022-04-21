@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
+import DisplayKey from './common/DisplayKeys';
 import MainKeys from './common/MainKeys';
 
 function Calculator() {
@@ -19,9 +20,6 @@ function Calculator() {
     setObject(result);
   };
 
-  let value = enteredValue;
-  if (obj.next) value = obj.next;
-
   const addClass = (arr, e) => {
     let classname = 'calculator__column calculator__column--main';
     if (arr.indexOf(e) === arr.length - 1 && arr.length !== 1) {
@@ -40,26 +38,9 @@ function Calculator() {
     />
   ));
 
-  return (
-    <table className="calculator">
-      <tr className="calculator__row">
-        <td
-          className="calculator__column calculator__column--top"
-          colSpan="4"
-        >
-          <input type="text" className="result" disabled value={value} />
-        </td>
-      </tr>
-      <tr className="calculator__row">{ displayKey(0, 4) }</tr>
-      <tr className="calculator__row">{ displayKey(4, 8) }</tr>
-      <tr className="calculator__row">{ displayKey(8, 12) }</tr>
-      <tr className="calculator__row">{ displayKey(12, 16) }</tr>
-      <tr className="calculator__row">
-        { displayKey(16, 17, 2) }
-        { displayKey(17, 19) }
-      </tr>
-    </table>
-  );
+  let value = enteredValue;
+  if (obj.next) value = obj.next;
+  return <DisplayKey value={value} displayKey={displayKey} />;
 }
 
 export default Calculator;
