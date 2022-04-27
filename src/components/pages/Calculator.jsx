@@ -67,12 +67,12 @@ function Calculator() {
   let value = enteredValue;
   if (obj.next) value = obj.next;
   return (
-    <>
+    <div className="claculator-container">
       <h3>Welcome to our page!</h3>
-      <div className="claculator-container">
+      <div className="calculator-main">
         <DisplayKey value={value} displayKey={displayKey} />
       </div>
-    </>
+    </div>
   );
 }
 

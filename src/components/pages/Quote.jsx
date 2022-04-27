@@ -9,7 +9,7 @@ function Quote() {
   ];
 
   return (
-    <div>
+    <div className="quote">
       {quotes.map((quote) => (
         <h3 key={quote.id}>{quote.quote}</h3>
       ))}
