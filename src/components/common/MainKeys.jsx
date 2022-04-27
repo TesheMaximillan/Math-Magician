@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function MainKeys(props) {
   const {
@@ -12,12 +12,5 @@ function MainKeys(props) {
     </td>
   );
 }
-
-MainKeys.propTypes = {
-  value: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
-  colSpan: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
-};
 
 export default MainKeys;
