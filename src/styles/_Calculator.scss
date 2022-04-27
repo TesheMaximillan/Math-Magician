@@ -1,42 +1,52 @@
-.calculator {
-  margin: 5rem auto;
-  width: 40rem;
-  border: 2px solid var(--border);
+.claculator-container {
+  display: flex;
+  margin: 5rem 10rem;
+  justify-content: space-between;
 
-  &__row {
-    width: 100%;
+  .calculator-main {
+    padding: 5rem 10rem;
+    border: 0.25rem solid var(--black);
   }
 
-  &__column {
-    &--top {
-      input {
-        @include input;
+  .calculator {
+    width: 40rem;
+    border: 2px solid var(--border);
 
-        background-color: var(--top);
-        color: var(--white);
-        text-align: right;
-        padding-right: 1rem;
-        font-size: 2rem;
-      }
+    &__row {
+      width: 100%;
     }
 
-    &--main {
-      width: 25%;
+    &__column {
+      &--top {
+        input {
+          @include input;
 
-      input {
-        @include input;
-
-        background-color: var(--main);
-        cursor: pointer;
+          background-color: var(--top);
+          color: var(--white);
+          text-align: right;
+          padding-right: 1rem;
+          font-size: 2rem;
+        }
       }
-    }
 
-    &--side {
-      input {
-        @include input;
+      &--main {
+        width: 25%;
 
-        background-color: var(--side);
-        cursor: pointer;
+        input {
+          @include input;
+
+          background-color: var(--main);
+          cursor: pointer;
+        }
+      }
+
+      &--side {
+        input {
+          @include input;
+
+          background-color: var(--side);
+          cursor: pointer;
+        }
       }
     }
   }
