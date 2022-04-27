@@ -5,22 +5,22 @@
 
   .calculator-main {
     padding: 5rem 10rem;
-    border: .25rem solid var(--black);
+    border: 0.25rem solid var(--black);
   }
 
   .calculator {
     width: 40rem;
     border: 2px solid var(--border);
-  
+
     &__row {
       width: 100%;
     }
-  
+
     &__column {
       &--top {
         input {
           @include input;
-  
+
           background-color: var(--top);
           color: var(--white);
           text-align: right;
@@ -28,27 +28,26 @@
           font-size: 2rem;
         }
       }
-  
+
       &--main {
         width: 25%;
-  
+
         input {
           @include input;
-  
+
           background-color: var(--main);
           cursor: pointer;
         }
       }
-  
+
       &--side {
         input {
           @include input;
-  
+
           background-color: var(--side);
           cursor: pointer;
         }
       }
     }
   }
-  
 }
