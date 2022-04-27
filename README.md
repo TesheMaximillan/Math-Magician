@@ -6,6 +6,9 @@
 
 ## Requirements
 
+* Three pages are created for `Home`, `Calculator` and `Quote`
+* React router is used for page navigation
+* React basic styling(pre-processed css files) are used
 * Existing calculate.js and operate.js are added into a logic/ directory.
 * Event handlers are implemented.
 * I Used the math logic from calculate.js and operate.js.
