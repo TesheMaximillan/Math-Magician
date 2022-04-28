@@ -25,7 +25,9 @@
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/51437483/164388976-c805b600-870f-46dc-8a88-9b05d719e79a.png)
+[Home Page]![image](https://user-images.githubusercontent.com/51437483/165576982-2c581cf5-97b2-461d-984a-1724e4fe5f9e.png)
+[Calculator Page]![image](https://user-images.githubusercontent.com/51437483/165577705-4a5aa7e7-5e69-44be-9c98-e05676c9982b.png)
+[Quote Page]![image](https://user-images.githubusercontent.com/51437483/165577979-e9edcfa4-208b-4024-ae36-3a14d9367cce.png)
 
 ## Setup project in your local machine
 
