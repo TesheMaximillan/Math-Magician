@@ -1,29 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Lists from './Lists';
+import Lists from '../common/Lists';
 
 function NavBar() {
   const Links = [
     {
       id: 1,
       name: 'Home',
-      path: '/',
+      path: '/Math-Magician/',
     },
     {
       id: 2,
       name: 'Calculator',
-      path: '/calculator',
+      path: '/Math-Magician/calculator',
     },
     {
       id: 3,
       name: 'Quote',
-      path: '/quote',
+      path: '/Math-Magician/quote',
     },
   ];
   return (
     <div className="navbar">
       <div className="logo">
-        <NavLink to="/" className="logo__link"><h2>Math Magicians</h2></NavLink>
+        <NavLink to="/Math-Magician/" className="logo__link"><h2>Math Magicians</h2></NavLink>
       </div>
       <Lists Links={Links} />
     </div>
